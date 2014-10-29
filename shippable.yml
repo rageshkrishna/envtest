@@ -20,4 +20,4 @@ script:
  - echo -e $MULTI
 matrix:
  allow_failures:
-  - env: FIZZBIN=hello SHOULD_FAIL="maybe"
+  - env: FIZZBIN=hello SHOULD_FAIL="yes"
