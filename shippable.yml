@@ -15,4 +15,4 @@ script:
  - echo $BIN
  - echo $BAR
  - echo $BAZ
- - echo $MULTI
+ - echo -e $MULTI
