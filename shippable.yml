@@ -6,6 +6,7 @@ env:
   - FIZZBIN=hello
   - FOO=this-has-hyphens - and spaces, too!
   - BIN="has spaces and neatly quoted"
+  - MULTI="This is a multi-line env.\nHere's the next line.\nAnd one more."
   - secure: ocMWsSSK+Js+Q2ipHHAeSrYVqxnRMlRJn8jbQqOFKyk0d4R4pFIQSuP0bU1+jw1xqHBi55ECrUYZUL58yUXRSQYJ9hidzyRsX0Xf14nhjxIVpZ7wbGzYx7JdMR9YU8vm2aDP1HJ9Ogpot9wpKxtPNGlmcrQI/zD+LlpVNiVN3zO/Qqh1Rw3pxCdQ7l0ZGklQuZDl23LB7LKaK7wut9DR8WYVHncogz3lhG9cYOLWyBIckGLgTBv1MAtskZtETIgu1X8oYJJZHyGYE0CTrhAphvogF5+OS+c12HnfiwLOTL4XRROA33/qQOhFr7c4fL9CbLTAeNKKimG09gKcOeJlkA==
   - secure: evd6jTRHIePi8NVhqtww5GBrVXO74QQP93ezCFJK48yPgXrjA4nmBcoDh/8ED22l+aRWzqTNvz67tcmgr+oyqIG/ygNP4rEtEiP9nukwW53OFepgajvlNRnnmzrsdS5q9JtxctQwZCfztvg1nhxnDrNlAKvhf0NByqgu1Mdh8xqcmZsyzjPmaV8iSZUUligtymP0xB2ePqTegGGc5S9KTzek+tAOL2GGieRMNh3X9aE8hD1IuqB0O5m6ostjW3o5flj3BCGooLGITnf3l4/CFzlKH/kHs9sYIWxrD7wtOS2qUVApOgZuMAhKiQoJLixprZW3MzdNL3v/V3RLGf2EJQ==
   - secure: C+wAPrMHczX+1jJNXhWAuA+JNs4wHeRiJMbTzJp0m5elsICzJ+5/HcCtrKJOxeWRL+avHqNX156Kx11jPZ4rjKik2siONgd8oedhddwlcbbSpC+2BcqjVdvQAYa8JBC/Ezx9CQxz6wfqhfId54ZjJi+W78IdgXt+1owYv1vg+jjgtZJtG8CeeLFcBsCIo/mBXbBQZLref+XApy4cwJaN615n3Rk//3EWcPsz2CxNcIztqMmsRVj697Pb7r3kPTpF7+tvzjfU/cXweQi/4gPfEjtQn6LwXYlp5o6pzGNqr27nY4prkKum15tzMbAWCIhf94X6r+XeoF3LNk9vZLUa0w==
