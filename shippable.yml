@@ -4,6 +4,7 @@ python:
 env:
  global:
   - FIZZBIN=hello
+  - SHOULD_FAIL=maybe
   - FOO=this-has-hyphens - and spaces, too!
   - BIN="has spaces and neatly quoted"
   - secure: ocMWsSSK+Js+Q2ipHHAeSrYVqxnRMlRJn8jbQqOFKyk0d4R4pFIQSuP0bU1+jw1xqHBi55ECrUYZUL58yUXRSQYJ9hidzyRsX0Xf14nhjxIVpZ7wbGzYx7JdMR9YU8vm2aDP1HJ9Ogpot9wpKxtPNGlmcrQI/zD+LlpVNiVN3zO/Qqh1Rw3pxCdQ7l0ZGklQuZDl23LB7LKaK7wut9DR8WYVHncogz3lhG9cYOLWyBIckGLgTBv1MAtskZtETIgu1X8oYJJZHyGYE0CTrhAphvogF5+OS+c12HnfiwLOTL4XRROA33/qQOhFr7c4fL9CbLTAeNKKimG09gKcOeJlkA==
@@ -19,4 +20,4 @@ script:
  - echo -e $MULTI
 matrix:
  allow_failures:
-  - env: FIZZBIN=hello
+  - env: FIZZBIN=hello SHOULD_FAIL="maybe"
