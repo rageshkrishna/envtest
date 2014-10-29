@@ -4,13 +4,15 @@ python:
 env:
  global:
   - FIZZBIN=hello
-  - SHOULD_FAIL=maybe
   - FOO=this-has-hyphens - and spaces, too!
   - BIN="has spaces and neatly quoted"
   - secure: ocMWsSSK+Js+Q2ipHHAeSrYVqxnRMlRJn8jbQqOFKyk0d4R4pFIQSuP0bU1+jw1xqHBi55ECrUYZUL58yUXRSQYJ9hidzyRsX0Xf14nhjxIVpZ7wbGzYx7JdMR9YU8vm2aDP1HJ9Ogpot9wpKxtPNGlmcrQI/zD+LlpVNiVN3zO/Qqh1Rw3pxCdQ7l0ZGklQuZDl23LB7LKaK7wut9DR8WYVHncogz3lhG9cYOLWyBIckGLgTBv1MAtskZtETIgu1X8oYJJZHyGYE0CTrhAphvogF5+OS+c12HnfiwLOTL4XRROA33/qQOhFr7c4fL9CbLTAeNKKimG09gKcOeJlkA==
   - secure: evd6jTRHIePi8NVhqtww5GBrVXO74QQP93ezCFJK48yPgXrjA4nmBcoDh/8ED22l+aRWzqTNvz67tcmgr+oyqIG/ygNP4rEtEiP9nukwW53OFepgajvlNRnnmzrsdS5q9JtxctQwZCfztvg1nhxnDrNlAKvhf0NByqgu1Mdh8xqcmZsyzjPmaV8iSZUUligtymP0xB2ePqTegGGc5S9KTzek+tAOL2GGieRMNh3X9aE8hD1IuqB0O5m6ostjW3o5flj3BCGooLGITnf3l4/CFzlKH/kHs9sYIWxrD7wtOS2qUVApOgZuMAhKiQoJLixprZW3MzdNL3v/V3RLGf2EJQ==
   - secure: C+wAPrMHczX+1jJNXhWAuA+JNs4wHeRiJMbTzJp0m5elsICzJ+5/HcCtrKJOxeWRL+avHqNX156Kx11jPZ4rjKik2siONgd8oedhddwlcbbSpC+2BcqjVdvQAYa8JBC/Ezx9CQxz6wfqhfId54ZjJi+W78IdgXt+1owYv1vg+jjgtZJtG8CeeLFcBsCIo/mBXbBQZLref+XApy4cwJaN615n3Rk//3EWcPsz2CxNcIztqMmsRVj697Pb7r3kPTpF7+tvzjfU/cXweQi/4gPfEjtQn6LwXYlp5o6pzGNqr27nY4prkKum15tzMbAWCIhf94X6r+XeoF3LNk9vZLUa0w==
   - secure: nzA7oR4Bsh6ppS3hpokS7JPE4CdZ4hdoAMNUfIS3gi1e9vK5WqS/CTjdvYH73UtYzCNIfkCy7mZUaWkti0mETf3T41PHKOmdJqXza/TYK1pnPMxWrSyRYmM5aDFzZI4mHA6hBfwTk5veaj4SLacCOOk04wlQ/guFTjLkCXaJ9bcCFqrHUq7CjwqJPogaIXPx9KpqI9B0OHjeO9JwBlrDF33XKUjByUm80ZwPJpc0NGAtR1FESnIBDU1p8iAUn63evEvtE7RUYovxHaHcNcrO3vRQr8eAkHTGwmDg6NVR8+GZyRkhiPrMhNVxpw8j23bDODgjzBW5CcAE5ifj7miiyQ==
+ matrix:
+  - SHOULD_FAIL=yes
+  - SHOULD_FAIL=no
 install: true
 script:
  - echo $FOO
@@ -18,6 +20,7 @@ script:
  - echo $BAR
  - echo $BAZ
  - echo -e $MULTI
+ - if [ "$SHOULD_FAIL" == "yes" ]; then exit 100; fi
 matrix:
  allow_failures:
   - env: FIZZBIN=hello SHOULD_FAIL="yes"
