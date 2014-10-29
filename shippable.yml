@@ -3,7 +3,7 @@ python:
  - 2.7
 env:
  global:
-  - FOO=this-has-hyphens
+  - FOO=this-has-hyphens - and spaces, too!
 install: true
 script:
  - echo $FOO
